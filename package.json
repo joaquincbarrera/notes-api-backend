@@ -11,11 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.23.1",
-    "nodemon": "^2.0.20"
+    "eslint": "8.23.1",
+    "nodemon": "2.0.20"
   },
   "dependencies": {
     "cors": "2.8.5",
-    "express": "^4.18.1"
+    "dotenv": "16.0.2",
+    "express": "4.18.1",
+    "mongoose": "6.6.2"
   }
 }

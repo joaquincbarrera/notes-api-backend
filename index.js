@@ -10,8 +10,6 @@ const logger = require('./middleware/logger')
 const notFound = require('./middleware/notFound')
 const handleErrors = require('./middleware/handleErrors')
 const Note = require('./models/Note')
-const { request, response } = require('express')
-const { handle } = require('express/lib/application')
 
 app.use(express.json()) 
 app.use(cors())
@@ -97,8 +95,8 @@ app.use(handleErrors)
 
 const PORT = process.env.PORT
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
 
-
+module.exports = {app, server}

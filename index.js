@@ -31,4 +31,16 @@ const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
 
+process.on('SIGINT', function() {
+    console.log( '(Ctrl-C) server exit' )
+    // some other closing procedures go here
+    process.exit(0)
+})
+
+process.on('uncaughtException', function() {
+    console.log( '(uncaughtException) server exit' )
+    // some other closing procedures go here
+    process.exit(0)
+})
+
 module.exports = {app, server}
